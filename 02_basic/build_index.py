@@ -11,7 +11,7 @@ from embeddings import NVIDIAEmbeddingsCustom
 from langchain_chroma import Chroma
 
 GITHUB_TOKEN = os.getenv("GITHUB_TOKEN")
-NVIDIA_API_KEY = os.getenv("NVIDIA_BUILD_API")
+NVIDIA_API_KEY = os.getenv("NVIDIA_BUILD_KEY")
 
 pages = load_all_pdfs(GITHUB_TOKEN)
 print(f"총 페이지: {len(pages)}")
