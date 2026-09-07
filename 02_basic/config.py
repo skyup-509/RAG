@@ -2,17 +2,6 @@ import os
 from dotenv import load_dotenv
 load_dotenv()
 
-try:
-    from google.colab import userdata
-
-    if not os.getenv("GITHUB_TOKEN"):
-        token = userdata.get("GITHUB_TOKEN")
-        if token:
-            os.environ["GITHUB_TOKEN"] = token
-
-except ImportError:
-    pass
-
 # 파일 불러오는 url 설정
 GITHUB_TOKEN = os.getenv("GITHUB_TOKEN")
 
